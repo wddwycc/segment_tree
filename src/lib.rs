@@ -9,7 +9,7 @@ pub struct SegmentTree {
 
 impl SegmentTree {
     // O(n)
-    pub fn build(start: usize, end: usize, vals: &[i32]) -> Self {
+    pub fn new(start: usize, end: usize, vals: &[i32]) -> Self {
         if start == end {
             return Self {
                 start,
@@ -20,8 +20,8 @@ impl SegmentTree {
             };
         }
         let mid = start + (end - start) / 2;
-        let left = Self::build(start, mid, vals);
-        let right = Self::build(mid + 1, end, vals);
+        let left = Self::new(start, mid, vals);
+        let right = Self::new(mid + 1, end, vals);
         let sum = left.sum + right.sum;
         Self {
             start,
