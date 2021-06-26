@@ -1,10 +1,10 @@
 // Ref: https://en.wikipedia.org/wiki/Segment_tree
 pub struct SegmentTree {
-    pub start: usize,
-    pub end: usize,
-    pub sum: i32,
-    pub left: Option<Box<SegmentTree>>,
-    pub right: Option<Box<SegmentTree>>,
+    start: usize,
+    end: usize,
+    sum: i32,
+    left: Option<Box<SegmentTree>>,
+    right: Option<Box<SegmentTree>>,
 }
 
 impl SegmentTree {
